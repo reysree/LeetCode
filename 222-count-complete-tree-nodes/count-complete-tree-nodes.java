@@ -15,23 +15,28 @@
  */
 class Solution {
     public int countNodes(TreeNode root) {
+        // if(root == null){
+        //     return 0;
+        // }
+        // Queue<TreeNode> queue = new LinkedList<>();
+        // queue.offer(root);
+        // int count = 0;
+
+        // while(!queue.isEmpty()){
+        //     TreeNode temp = queue.poll();
+        //     count++;
+        //     if(temp.left != null){
+        //         queue.offer(temp.left);
+        //     }
+        //     if(temp.right != null){
+        //         queue.offer(temp.right);
+        //     }
+        // }
+        // return count;
         if(root == null){
             return 0;
         }
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        int count = 0;
 
-        while(!queue.isEmpty()){
-            TreeNode temp = queue.poll();
-            count++;
-            if(temp.left != null){
-                queue.offer(temp.left);
-            }
-            if(temp.right != null){
-                queue.offer(temp.right);
-            }
-        }
-        return count;
+        return 1+countNodes(root.left)+countNodes(root.right);
     }
 }
