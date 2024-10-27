@@ -16,9 +16,6 @@
 class Solution {
     public List<String> binaryTreePaths(TreeNode root) {
         ArrayList<String> alist = new ArrayList<>();
-        if(root == null){
-            return null;
-        }
         String s = "";
         recursion(root, alist, s);
         return alist;
