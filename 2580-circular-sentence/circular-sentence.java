@@ -1,24 +1,18 @@
 class Solution {
     public boolean isCircularSentence(String sentence) {
-        String[] arr = sentence.split(" ");
-        if (arr.length == 1 && arr[0].charAt(0) == arr[0].charAt(arr[0].length() - 1)) {
-            System.out.println(arr[0].charAt(0) + "    " + arr[0].charAt(arr[0].length() - 1));
-            return true;
-        } else if (arr.length > 1) {
-            for (int i = 0; i < arr.length - 1; i++) {
-                if (arr[i].charAt(arr[i].length() - 1) == arr[i + 1].charAt(0)) {
-                    continue;
-                } else {
-                    return false;
-                }
-            }
-            if (arr[0].charAt(0) == arr[arr.length - 1].charAt(arr[arr.length - 1].length() - 1)) {
-                return true;
-            } else {
+        String[] words = sentence.split(" ");
+        int n = words.length;
+        
+        // Check if sentence is circular
+        for (int i = 0; i < n; i++) {
+            // Get last character of current word and first character of next word (circularly)
+            char lastChar = words[i].charAt(words[i].length() - 1);
+            char firstChar = words[(i + 1) % n].charAt(0);
+            if (lastChar != firstChar) {
                 return false;
             }
-        } else {
-            return false;
         }
+        
+        return true;
     }
 }
