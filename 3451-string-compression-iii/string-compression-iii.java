@@ -16,21 +16,6 @@ class Solution {
                     count++;
             }
         }
-        // LinkedHashMap<Character, Integer> hmap = new LinkedHashMap<>();
-        // for (int i = 0; i < word.length(); i++) {
-        //     char c = word.charAt(i);
-        //     hmap.put(c, hmap.getOrDefault(c, 0) + 1);
-        // }
-
-        // String res = "";
-        // for (Character key : hmap.keySet()) {
-        //     int temp = hmap.get(key);
-        //     while (temp > 9) {
-        //         res += "9" + key;
-        //         temp -= 9;
-        //     }
-        //     res += temp + "" + key;
-        // }
         return res+count+first;
     }
 }
