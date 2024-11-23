@@ -4,7 +4,7 @@ class Solution {
         s = s.toLowerCase();
         String res = "";
         for(int i=0; i< s.length();i++){
-            if((int)s.charAt(i) >= 97 && (int)s.charAt(i) <= 122 || ((int)s.charAt(i) >= 48 && (int)s.charAt(i)<=57)){
+            if(s.charAt(i) >= 'a' && s.charAt(i) <= 'z' || (s.charAt(i) >= '0' && s.charAt(i)<='9')){
                 res=res+s.charAt(i);
             }
         }
