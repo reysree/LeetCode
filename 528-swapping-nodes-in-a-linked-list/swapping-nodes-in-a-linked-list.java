@@ -23,8 +23,8 @@ class Solution {
             temp2= temp2.next;
             dummy= dummy.next;
         }
-        System.out.println("temp1 value is : "+temp1.val);
-        System.out.println("temp2 value is : "+temp2.val);
+        // System.out.println("temp1 value is : "+temp1.val);
+        // System.out.println("temp2 value is : "+temp2.val);
         i = temp1.val;
         temp1.val = temp2.val;
         temp2.val= i;
