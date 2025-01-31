@@ -18,12 +18,12 @@ class BrowserHistory {
         }
     }
 
-    Node head = new Node();
-    Node tail;
+    Node tail = new Node();
+    //Node tail;
 
     public BrowserHistory(String homepage) {
-        head.val = homepage;
-        tail = head;
+        tail.val = homepage;
+        //tail = head;
     }
 
     public void visit(String url) {
